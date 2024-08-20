@@ -1,0 +1,110 @@
+--script made by ARX
+-- discord: highuntilfailure
+-- idk how to bypass speed checks it doesnt matter tho enjoy!
+
+local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+
+local Window = Rayfield:CreateWindow({
+   Name = "Eat Slimes to Grow HUGE",
+   LoadingTitle = "brain rot game",
+   LoadingSubtitle = "by ARX / highuntilfailure",
+   ConfigurationSaving = {
+      Enabled = true,
+      FolderName = nil, -- Create a custom folder for your hub/game
+      FileName = "Wtfxploit691"
+   },
+   Discord = {
+      Enabled = false,
+      Invite = "f3SMwWvrrA", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ABCD would be ABCD
+      RememberJoins = false -- Set this to false to make them join the discord every time they load it up
+   },
+   KeySystem = false, -- Set this to true to use our key system
+   KeySettings = {
+      Title = "Join The Telegram",
+      Subtitle = "Link In The Discord Server",
+      Note = "Join From Misc Tab",
+      FileName = "wtfxploit69", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
+      SaveKey = true, -- The user's key will be saved, but if you change the key, they will be unable to use your script
+      GrabKeyFromSite = true, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
+      Key = {"https://pastebin.com/raw/CMuL2Ftr"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
+   }
+})
+
+local MainTab = Window:CreateTab("Home", nil) -- Title, Image 
+ local MainSection = MainTab:CreateSection("Main") 
+
+Rayfield:Notify({
+   Title = "if u see this the script works",
+   Content = "made by ARX / highuntilfailure",
+   Duration = 90,
+   Image = nil,
+   Actions = { -- Notification Buttons
+      Ignore = {
+         Name = "love you",
+         Callback = function()
+         print("user pressed ok")
+      end
+   },
+},
+})
+
+local Slider = MainTab:CreateSlider({
+   Name = "Walkspeed",
+   Range = {0, 100},
+   Increment = 1,
+   Suffix = "Speed",
+   CurrentValue = 16 ,
+   Flag = "Slider1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = (Value)
+
+   end,
+})
+
+
+local Button = MainTab:CreateButton({
+   Name = "XP - DO NOT GO OVER LEVEL 800-900",
+   Callback = function()
+        local args = {
+    [1] = 12500
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Honeypot"):WaitForChild("Internal"):WaitForChild("RemoteStorage"):WaitForChild("AwardXp - RemoteEvent"):FireServer(unpack(args))
+
+   end,
+})
+
+local Button = MainTab:CreateButton({
+   Name = "1 Million Size",
+   Callback = function()
+        local args = {
+    [1] = 12
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Honeypot"):WaitForChild("Internal"):WaitForChild("RemoteStorage"):WaitForChild("ClaimPlaytimeReward - RemoteEvent"):FireServer(unpack(args))
+
+
+    end,
+})
+
+local Button = MainTab:CreateButton({
+   Name = "Alot of size",
+   Callback = function()
+        local args = {
+    [1] = 123456999123132233
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Honeypot"):WaitForChild("Internal"):WaitForChild("RemoteStorage"):WaitForChild("AwardSpinSize - RemoteEvent"):FireServer(unpack(args))
+
+
+    end,
+})
+
+local Button = MainTab:CreateButton({
+   Name = "Back to 0",
+   Callback = function()
+        game:GetService("ReplicatedStorage"):WaitForChild("Honeypot"):WaitForChild("Internal"):WaitForChild("RemoteStorage"):WaitForChild("SpawnPlayer - RemoteEvent"):FireServer()
+
+
+    end,
+})
