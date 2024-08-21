@@ -1,6 +1,5 @@
---script made by ARX
+-- script made by ARX
 -- discord: highuntilfailure
--- idk how to bypass speed checks it doesnt matter tho enjoy!
 
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
@@ -35,14 +34,14 @@ local MainTab = Window:CreateTab("Home", nil) -- Title, Image
 
 Rayfield:Notify({
    Title = "if u see this the script works",
-   Content = "made by ARX / highuntilfailure",
+   Content = "XP may not work update soon",
    Duration = 90,
    Image = nil,
    Actions = { -- Notification Buttons
       Ignore = {
-         Name = "love you",
+         Name = "This is the best script ever!",
          Callback = function()
-         print("user pressed ok")
+         print("User Clicked Ok")
       end
    },
 },
@@ -63,10 +62,10 @@ local Slider = MainTab:CreateSlider({
 
 
 local Button = MainTab:CreateButton({
-   Name = "XP - DO NOT GO OVER LEVEL 800-900",
+   Name = "XP - DONT EXCEED LEVEL 750-900",
    Callback = function()
         local args = {
-    [1] = 12500
+    [1] = 1000
 }
 
 game:GetService("ReplicatedStorage"):WaitForChild("Honeypot"):WaitForChild("Internal"):WaitForChild("RemoteStorage"):WaitForChild("AwardXp - RemoteEvent"):FireServer(unpack(args))
